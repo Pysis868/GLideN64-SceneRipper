@@ -788,7 +788,7 @@ void gSPTransformVertex(u32 v, SPVertex * spVtx, float mtx[4][4])
 
 	if (ripMode == 0) {
 		CopyMatrix(ripMatrix, gSP.matrix.modelView[gSP.matrix.modelViewi]);
-	} else if (ripMode >= 1 || ripMode <= 32) {
+	} else if (ripMode >= 1 && ripMode <= 32) {
 		CopyMatrix(ripMatrix, gSP.matrix.modelView[ripMode - 1]);
 	} else {
 		// Perspective
